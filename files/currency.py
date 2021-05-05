@@ -13,7 +13,7 @@ def convert():
     if request.method == 'POST':
         currency_input = request.form['currency_input']
         print(currency_input)
-        print("hi")
+        print("hi github")
 
 
 
