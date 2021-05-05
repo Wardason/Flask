@@ -26,8 +26,29 @@ def convert():
 
 
     if currency_input == 'usd':
-        converted_amount = float(number_input) * usd
-        print(converted_amount)
+        converted_amount = round(float(number_input) * usd)
+        msg = f'{number_input}€ are {converted_amount}$'
+        return render_template('currency.html', variable=msg)
+
+    elif currency_input == 'pounds':
+        converted_amount = round(float(number_input) * pound)
+        msg = f'{number_input}€ are {converted_amount}£'
+        return render_template('currency.html', variable=msg)
+
+    elif currency_input == 'yen':
+        converted_amount = round(float(number_input) * yen)
+        msg = f'{number_input}€ are {converted_amount}¥'
+        return render_template('currency.html', variable=msg)
+
+    elif currency_input == 'franc':
+        converted_amount = round(float(number_input) * franc)
+        msg = f'{number_input}€ are {converted_amount} SFr'
+        return render_template('currency.html', variable=msg)
+
+    elif currency_input == 'yuan':
+        converted_amount = round(float(number_input) * yuan)
+        msg = f'{number_input}€ are {converted_amount}¥'
+        return render_template('currency.html', variable=msg)
 
 
 
