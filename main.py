@@ -1,10 +1,13 @@
 from flask import Flask, render_template
 from files.currency import currency
+from files.pwd_generator import pwd_generator
 
 
 app = Flask(__name__)
 
 app.register_blueprint(currency)
+app.register_blueprint(pwd_generator)
+
 
 
 @app.route("/")
