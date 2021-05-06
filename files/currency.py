@@ -50,10 +50,6 @@ def convert():
         msg = f'{number_input}€ are {converted_amount}¥'
         return render_template('currency.html', variable=msg)
 
-
-
-
-
     return render_template('currency.html')
 
 
