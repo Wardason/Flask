@@ -9,10 +9,13 @@ pwd_generator = Blueprint('pwd_generator', __name__)
 def generator():
     if request.method == 'POST':
         number_input = request.form['number_input']
-    else:
+    elif request.method == 'POST':
         number_input = request.args.get('number_input')
+    else:
+        number_input = 0
 
     length = int(number_input)
+
     password = base64.b64encode(os.urandom(length)).decode("ascii")
     msg = f'Your password is {password}'
 

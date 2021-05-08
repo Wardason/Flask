@@ -12,20 +12,210 @@
 	font-size: 16px;
 	font-family: monospace;
 }
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+#head {
+	color: #fff;
+	font-size: 2.5em;
+	text-align: center;
+    margin-top: 1em;
+}
+
+.cursor {
+	font-weight: 600;
+	color: #7CFC11;
+	opacity: 0;
+	animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+	0%, 40%, 100% {
+		opacity: 0;
+	}
+	50%, 90% {
+		opacity: 1;
+	}
+}
+
+.container {
+	width: 90%;
+	max-width: 1040px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#bar {
+	height: 1.75em;
+	background-color: #DAD9D9;
+	border-radius: 5px 5px 0 0;
+}
+
+.icon {
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	margin: 5px 5px 0 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.icon-red {
+	margin-left: 20px;
+	background-color: #E94B35;
+}
+
+.icon-red:hover {
+	background-color: #c65037;
+}
+
+.icon-yellow {
+	background-color: #f2cb41;
+}
+
+.icon-yellow:hover {
+	background-color: #c8ac41;
+}
+
+.icon-green {
+	background-color: #1AAF5C;
+}
+
+.icon-green:hover {
+	background-color: #078650;
+}
+
+#screen {
+	background-color: #545650;
+	height: 100%;
+	border-radius: 0 0 5px 5px;
+	overflow-y: auto;
+}
+
+#innercontent {
+	margin-left: 0.75em;
+}
+
+#content {
+	font: 1em Consolas, monaco, monospace;
+}
+
+.topic_header {
+	color: #7CFC11;
+	margin-top: 4em;
+    margin-left: 16em;
+}
+
+.topic_text {
+	margin-left: 16em;
+	margin-top: 1em;
+}
+
+.wrapper {
+	display: flex;
+	font-size: 0.75em;
+	height: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+#header, #footer, #content {
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+#header {
+	height: 3em;
+	margin: 0.25em 0;
+	top: 0;
+}
+
+#footer {
+	height: 10em;
+	bottom: 0;
+	width: 90%;
+	max-width: 1040px;
+	margin: 0 auto;
+}
+
+#innerfooter {
+	text-align: center;
+	margin: 1.5em 0 0.5em 0;
+}
+
+#footer_fields{
+    color: #7CFC11;
+    margin-left: 1em;
+    }
+
+#content {
+	top: 5em;
+	bottom: 10em;
+}
+
+@media (min-width: 1600px) {
+	body {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 800px) {
+	body {
+		font-size: 14px;
+	}
+
+	.topic_text {
+		margin-left: 1.25em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body {
+		font-size: 12px;
+	}
+}
+@font-face{font-family:'FontAwesome';src:url('../fonts/fontawesome-webfont.eot?v=4.7.0');src:url
+
 </style>
 
 <body>
+<div id="content">
+	<div class="container">
+		<div id="bar">
+			<div class="icon icon-red"></div>
+			<div class="icon icon-yellow"></div>
+			<div class="icon icon-green"></div>
+		</div>
 
-<form action="http://127.0.0.1:1337/password" method="post">
-    <input type="number" name="number_input">
-    <input type="submit" name="submit">
+		<div id="screen">
+			<div id="innercontent">
+                <div id="head"> Password creator<span class="cursor">_</span></div>
+                <div class="topic_header">Please indicate how long your password should be</div>
+				<div class="topic_text">
 
-</form>
+                <form action="http://127.0.0.1:1337/password" method="post">
+                    <input type="number" name="number_input">
+                    <input type="submit" name="submit">
+                </form>
 
-<h3>{{ variable }}</h3>
+                <h3>{{ variable }}</h3>
+
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-
+<div id="footer">
+<a href="http://127.0.0.1:1337/" id="footer_fields">Home</a>
+<a href="https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/2:1/w_1000/Dababy_BabyOnBaby.jpg" id="footer_fields">Privacy Policy</a>
+<a href="https://github.com/Wardason/Flask" id="footer_fields">Source Code</a>
+</div>
 
 
 </body>

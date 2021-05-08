@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+This not completely my design, it's actually designed
+by Tristan Fisher(http://www.tristanfisher.com).
+I only redesigned it and add features...
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -113,8 +118,6 @@
 	margin-top: 1em;
 }
 
-
-
 #header, #footer, #content {
 	position: absolute;
 	right: 0;
@@ -127,12 +130,28 @@
 	top: 0;
 }
 
-
-
 #content {
 	top: 5em;
 	bottom: 10em;
 }
+
+#footer {
+	height: 10em;
+	bottom: 0;
+	width: 90%;
+	max-width: 1040px;
+	margin: 0 auto;
+}
+
+#innerfooter {
+	text-align: center;
+	margin: 1.5em 0 0.5em 0;
+}
+
+#footer_fields{
+    color: #7CFC11;
+    margin-left: 1em;
+    }
 
 @media (min-width: 1600px) {
 	body {
@@ -198,6 +217,12 @@
 			</div>
 		</div>
 	</div>
+
+<div id="footer">
+<a href="http://127.0.0.1:1337/" id="footer_fields">Home</a>
+<a href="https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/2:1/w_1000/Dababy_BabyOnBaby.jpg" id="footer_fields">Privacy Policy</a>
+<a href="https://github.com/Wardason/Flask" id="footer_fields">Source Code</a>
+</div>
 
 
 
