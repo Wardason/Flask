@@ -16,8 +16,17 @@
 
 <body>
 
-<label for="quantity">please choose the length of your password</label>
-<input type="number" id="quantity" name="number" min="1" max="50">
+<form action="http://127.0.0.1:1337/password" method="post">
+    <input type="number" name="number_input">
+    <input type="submit" name="submit">
+
+</form>
+
+<h3>{{ variable }}</h3>
+
+
+
+
 
 </body>
 </html>
