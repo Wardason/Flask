@@ -89,7 +89,7 @@
 
 #screen {
 	background-color: #545650;
-	height: 100%;
+	height: 80%;
 	border-radius: 0 0 5px 5px;
 	overflow-y: auto;
 }
@@ -104,8 +104,10 @@
 
 .topic_header {
 	color: #7CFC11;
-	margin-top: 4em;
+	margin-top: 10em;
     margin-left: 16em;
+    font-size: 18px;
+	font-weight: bold;
 }
 
 .topic_text {
@@ -135,7 +137,7 @@
 }
 
 #footer {
-	height: 10em;
+	height: 22em;
 	bottom: 0;
 	width: 90%;
 	max-width: 1040px;
@@ -147,7 +149,7 @@
 	margin: 1.5em 0 0.5em 0;
 }
 
-#footer_fields{
+.footer_fields{
     color: #7CFC11;
     margin-left: 1em;
     }
@@ -155,6 +157,10 @@
 #content {
 	top: 5em;
 	bottom: 10em;
+}
+
+.input{
+   width: 200px;
 }
 
 @media (min-width: 1600px) {
@@ -198,7 +204,7 @@
 				<div class="topic_text">
 
                 <form action="http://127.0.0.1:1337/password" method="post">
-                    <input type="number" name="number_input">
+                    <input type="number" class="input" name="number_input" min="0" max="45">
                     <input type="submit" name="submit">
                 </form>
 
@@ -212,9 +218,9 @@
 
 
 <div id="footer">
-<a href="http://127.0.0.1:1337/" id="footer_fields">Home</a>
-<a href="https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/2:1/w_1000/Dababy_BabyOnBaby.jpg" id="footer_fields">Privacy Policy</a>
-<a href="https://github.com/Wardason/Flask" id="footer_fields">Source Code</a>
+<a href="http://127.0.0.1:1337/" class="footer_fields">Home</a>
+<a href="https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/2:1/w_1000/Dababy_BabyOnBaby.jpg" class="footer_fields">Privacy Policy</a>
+<a href="https://github.com/Wardason/Flask" class="footer_fields">Source Code</a>
 </div>
 
 
